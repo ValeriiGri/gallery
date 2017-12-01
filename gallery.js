@@ -26,18 +26,20 @@ class Gallery{
 
     eventListener(){
       let elem = document.querySelector('.thumbs');
-      
-      elem.onclick = function(event){
+  
+      elem.addEventListener('click',function(event){
+
+        event.preventDefault();
+
         let target = event.target;
-        
-        if(target.tagName == 'LI'){
-          let attr = target.querySelector('a').getAttribute(href);
+
+        if(target.tagName == 'IMG'){
+          let attr = target.parentNode.getAttribute('href');
           
           let imgLargeEl = document.querySelector('.largeImg');
           imgLargeEl.innerHTML = `
-                            <img src= ${attr} alt = "Large image">`;
+                            <img src= "${attr}" alt = "Large image">`;
         }
-      }
+      });
     }
-
   }
