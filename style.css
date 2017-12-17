@@ -41,3 +41,15 @@ li{
 .thumbs a:hover {
   border-color: #FF9900;
 }
+.popup{
+  color:white;
+  font-weight: bold;
+  font-size: 16px;
+}
+.pop{
+  width:30%;
+  margin-top: 25px;
+  padding:15px;
+  background-color: green;
+  border:2px solid black;
+}
